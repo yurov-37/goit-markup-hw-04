@@ -22,6 +22,8 @@ button {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 .list {
@@ -214,13 +216,18 @@ img {
 }
 
 .quality-thumb {
-  background-color: var(--background-grey-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border-radius: 4px;
   margin-bottom: 30px;
+  width: 270px;
+  height: 120px;
+
+  background-color: var(--background-grey-color);
 }
 
 .quality-icon {
-  margin: 25px 100px;
   width: 70px;
   height: 70px;
 }
@@ -288,8 +295,7 @@ img {
 }
 
 .team-signature {
-  padding-top: 30px;
-  padding-bottom: 16px;
+  padding: 30px 32px;
 }
 
 .team-list-name {
@@ -304,7 +310,7 @@ img {
 
 .team-list-position {
   margin-top: 0;
-  margin-bottom: 0;
+  margin-bottom: 16px;
 
   color: var(--secondary-text-color);
   font-size: 16px;
@@ -315,7 +321,6 @@ img {
 .social-networks {
   display: flex;
   justify-content: center;
-  padding: 0 32px 30px;
   margin: 0;
 }
 
@@ -337,6 +342,7 @@ img {
 
 .social-icon {
   width: 20px;
+  height: 20px;
   fill: currentColor;
 }
 
@@ -378,6 +384,7 @@ img {
   border-radius: 4px;
   color: #afb1b8;
   background-color: var(--white-color);
+  outline: transparent;
 }
 
 .clients-link:hover,
@@ -400,7 +407,7 @@ img {
 
 .footer-flex {
   display: flex;
-  /* align-items: center; */
+  align-items: baseline;
 }
 
 .footer .logo {
@@ -438,17 +445,15 @@ img {
 }
 
 .join-box {
-  padding-top: 12px;
-  padding-bottom: 40px;
+  /* display: flex; */
   margin-left: 70px;
 }
 
 .join-title {
-  font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   color: var(--white-color);
 
+  display: block;
   margin-top: 0;
   margin-bottom: 20px;
 }
@@ -548,7 +553,12 @@ img {
   margin-bottom: 0;
 }
 
-.projects-item:hover {
+.projects-item .link {
+  display: block;
+}
+
+.projects-item .link:hover,
+.projects-item .link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
